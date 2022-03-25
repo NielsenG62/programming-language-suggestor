@@ -32,7 +32,7 @@
     <button type="button" id="quiz-start" class="btn btn-info btn-sm">
       Start Quiz!
     </button>
-    <form>
+    <form class="hidden">
       <label for="which-end">Why do you want to learn programming?</label>
       <select class="form-control" id="which-end">
         <option value="none" selected disabled>---Choose an Answer---</option>
@@ -51,12 +51,26 @@
         <option value="cute">They're so cute!</option>
         <option value="why">I don't understand how this matters...</option>
       </select>
-      <label for="gopher">How do you feel about gophers?</label>
-      <select class="form-control" id="gopher">
+      <label for="mobile">Do you want to develop mobile apps?</label>
+      <select class="form-control" id="mobile">
         <option value="none" selected disabled>---Choose an Answer---</option>
-        <option value="cute">They're so cute!</option>
-        <option value="why">I don't understand how this matters...</option>
+        <option value="mobile">Yes!</option>
+        <option value="web">No.</option>
       </select>
+      <label for="apple">Do you like apples?</label>
+      <select class="form-control" id="apple">
+        <option value="none" selected disabled>---Choose an Answer---</option>
+        <option value="mac">An apple a day keeps the androids away</option>
+        <option value="pc">Apples are too popular.</option>
+      </select>
+      <button type="submit" class="btn-secondary btn">Submit</button>
     </form>
+    <div id="result" class="hidden">
+      <h2></h2>
+      <img />
+    </div>
+    <div id="error" class="hidden">
+      <p id="error-message"></p>
+    </div>
   </body>
 </html>
