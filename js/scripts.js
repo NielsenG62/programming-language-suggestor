@@ -33,34 +33,21 @@ $(document).ready(function () {
         if (end === "front") {
           answer = "JavaScript";
           img = "img/javascript.jpg";
+        } else if (reason === "fun") {
+          answer = "Python";
+          img = "img/python.jpg";
+        } else if (gopher === "cute") {
+          answer = "Go";
+          img = "img/go.jpg";
+        } else if (mobile === "web") {
+          answer = "C#";
+          img = "img/c-sharp.jpg";
+        } else if (apple === "mac") {
+          answer = "Swift";
+          img = "img/swift.jpg";
         } else {
-          // if end === back
-          if (reason === "fun") {
-            answer = "Python";
-            img = "img/python.jpg";
-          } else {
-            // if why === job
-            if (gopher === "cute") {
-              answer = "Go";
-              img = "img/go.jpg";
-            } else {
-              //if gopher === confused
-              if (mobile === "web") {
-                answer = "C#";
-                img = "img/c-sharp.jpg";
-              } else {
-                //if mobile === mobile
-                if (apple === "mac") {
-                  answer = "Swift";
-                  img = "img/swift.jpg";
-                } else {
-                  // if apple === pc
-                  answer = "Java";
-                  img = "img/java.jpg";
-                }
-              }
-            }
-          }
+          answer = "Java";
+          img = "img/java.jpg";
         }
         // display results
         $("#result h2").text(answer);
