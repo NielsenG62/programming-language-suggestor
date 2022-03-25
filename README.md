@@ -24,10 +24,12 @@ _This website presents the user with a series of questions. These answers are th
 
 ## Link to project on GitHub Pages
 
+https://nielseng62.github.io/programming-language-suggestor/
+
 ## Known Bugs
 
-- _None that I am aware of as of this commit_
+- _None that I am aware of as of this commit._
 
 ## License
 
-Copyright (c) _2022_ _Gabe Nielsen)_
+Copyright (c) _2022_ _Gabe Nielsen_
