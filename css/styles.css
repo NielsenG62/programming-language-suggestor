@@ -1,19 +1,20 @@
 .btn {
   display: block;
   margin: auto;
-  background-color: #a57548;
-  border-color: #a57548;
-  color: #dadad9;
+  background-color: #b5c2f9;
+  border-color: #b5c2f9;
+  color: black;
+  transition: all 0.5s;
 }
 
 .btn:hover {
-  background-color: #684b2f;
-  border-color: #684b2f;
-  color: #dadad9;
+  background-color: #8dd0fc;
+  border-color: #8dd0fc;
+  color: black;
 }
 
 .line {
-  border: 3px solid #a57548;
+  border: 3px solid #b5c2f9;
   margin: auto;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -25,7 +26,29 @@
 }
 
 body {
-  background-color: #47624f;
+  background: linear-gradient(
+    -45deg,
+    #ddb4f6,
+    #c9bbf8,
+    #b5c2f9,
+    #a1c9fb,
+    #8dd0fc
+  );
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {
