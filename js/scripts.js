@@ -20,6 +20,38 @@ $(document).ready(function () {
     } else {
       let answer = "";
       let img = "";
+      if (end === "front") {
+        answer = "JavaScript";
+        img = "img/javascript.jpg";
+      } else {
+        // if end === back
+        if (why === "fun") {
+          answer = "Python";
+          img = "img/python.jpg";
+        } else {
+          // if why === job
+          if (gopher === "cute") {
+            answer = "Go";
+            img = "img/go.jpg";
+          } else {
+            //if gopher === confused
+            if (mobile === "web") {
+              answer = "C#";
+              image = "img/c#.jpg";
+            } else {
+              //if mobile === mobile
+              if (apple === "mac") {
+                answer = "Swift";
+                img = "img/swift.jpg";
+              } else {
+                // if apple === pc
+                answer = "Java";
+                img = "img/java.jpg";
+              }
+            }
+          }
+        }
+      }
     }
   });
 });
