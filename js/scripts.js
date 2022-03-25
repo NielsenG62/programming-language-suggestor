@@ -1,8 +1,12 @@
 $(document).ready(function () {
+  // function for when the start quiz button is pressed
   $("button#start-quiz").click(function () {
     $("form").removeClass("hidden");
+    $("#start-quiz").addClass("hidden");
+    $(".line").removeClass("hidden");
   });
 
+  // function that runs when form is submitted
   $("#submit-btn").click(function () {
     $("form").submit(function (event) {
       event.preventDefault();
@@ -23,6 +27,7 @@ $(document).ready(function () {
           "Please answer every question before submitting."
         );
       } else {
+        // if all fields have answers
         let answer = "";
         let img = "";
         if (end === "front") {
@@ -57,6 +62,7 @@ $(document).ready(function () {
             }
           }
         }
+        // display results
         $("#result h2").text(answer);
         $("#result img").attr("src", img);
         $("#result").removeClass("hidden");
