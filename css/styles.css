@@ -53,3 +53,15 @@ label {
   text-align: center;
   margin-top: 2em;
 }
+
+#error {
+  background-color: #750d37;
+  color: #dadad9;
+  width: fit-content;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+img {
+  width: 50%;
+}
