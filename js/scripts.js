@@ -24,7 +24,7 @@ $(document).ready(function () {
 
       // checks that all questions are answered
       if (!end || !reason || !gopher || !mobile || !apple) {
-        $(".container").animate({ height: "977px" }, 500);
+        $(".container").animate({ height: "930px" }, 500);
         $("#error").removeClass("hidden");
         $("#error-message").text(
           "Please answer every question before submitting."

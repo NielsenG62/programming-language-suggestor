@@ -36,7 +36,6 @@ body {
   );
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
-  height: 100vh;
 }
 
 @keyframes gradient {
@@ -87,7 +86,7 @@ label {
 }
 
 #error {
-  background-color: #750d37;
+  background-color: #ac151d;
   color: #dadad9;
   width: fit-content;
   padding-left: 3em;
