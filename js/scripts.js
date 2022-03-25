@@ -3,13 +3,8 @@ $(document).ready(function () {
   $("button#start-quiz").click(function () {
     $("#start-quiz").addClass("hidden");
     $(".line").removeClass("hidden");
-    $(".line").animate({}, 1000);
-    $(".container").animate(
-      {
-        height: "900px",
-      },
-      1000
-    );
+    $(".line").animate({ width: "80%" }, 1000);
+    $(".container").animate({ height: "900px" }, 1000);
     $("form").removeClass("hidden");
   });
 
@@ -29,6 +24,7 @@ $(document).ready(function () {
 
       // checks that all questions are answered
       if (!end || !reason || !gopher || !mobile || !apple) {
+        $(".container").animate({ height: "977px" }, 500);
         $("#error").removeClass("hidden");
         $("#error-message").text(
           "Please answer every question before submitting."
@@ -57,6 +53,7 @@ $(document).ready(function () {
           img = "img/java.jpg";
         }
         // display results
+        $(".container").animate({ height: "1281px" }, 1000);
         $("#result h2").text(answer);
         $("#result img").attr("src", img);
         $("#result").removeClass("hidden");
