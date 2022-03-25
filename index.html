@@ -19,5 +19,44 @@
     <script src="js/scripts.js"></script>
     <title>Programming Language Selector</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Which Programming Language Should You Learn First?</h1>
+      <p>
+        If you are thinking about learning your first programming language,
+        chances are you have seen the massive (and ever-growing) list of
+        languages to learn. This can be overwhelming, as all of them serve a
+        specific purpose. This quiz is designed to help you with that decision.
+      </p>
+    </div>
+    <button type="button" id="quiz-start" class="btn btn-info btn-sm">
+      Start Quiz!
+    </button>
+    <form>
+      <label for="which-end">Why do you want to learn programming?</label>
+      <select class="form-control" id="which-end">
+        <option value="none" selected disabled>---Choose an Answer---</option>
+        <option value="front">I want to make cool websites for my projects!</option>
+        <option value="back">I want to build databases and servers!</option>
+      </select>
+      <label for="why">Why do you want to learn programming?</label>
+      <select class="form-control" id="why">
+        <option value="none" selected disabled>---Choose an Answer---</option>
+        <option value="fun">I think it'd be fun!</option>
+        <option value="job">I'm looking at a career switch.</option>
+      </select>
+      <label for="gopher">How do you feel about gophers?</label>
+      <select class="form-control" id="gopher">
+        <option value="none" selected disabled>---Choose an Answer---</option>
+        <option value="cute">They're so cute!</option>
+        <option value="why">I don't understand how this matters...</option>
+      </select>
+      <label for="gopher">How do you feel about gophers?</label>
+      <select class="form-control" id="gopher">
+        <option value="none" selected disabled>---Choose an Answer---</option>
+        <option value="cute">They're so cute!</option>
+        <option value="why">I don't understand how this matters...</option>
+      </select>
+    </form>
+  </body>
 </html>
