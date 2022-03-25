@@ -1,57 +1,66 @@
 $(document).ready(function () {
-  $("form").submit(function (event) {
-    event.preventDefault();
-    // Hides results after every submission
-    $("#result").addClass("hidden");
-    $("#error").addClass("hidden");
-    //defining variables for question answers
-    const end = $("select#which-end").val();
-    const reason = $("select#why").val();
-    const gopher = $("select#gopher").val();
-    const mobile = $("select#mobile").val();
-    const apple = $("select#apple").val();
+  $("button#start-quiz").click(function () {
+    $("form").removeClass("hidden");
+  });
 
-    // checks that all questions are answered
-    if (!end || !reason || !gopher || !mobile || !apple) {
-      $("error").removeClass("hidden");
-      $("#error-message").text(
-        "Please answer every question before submitting."
-      );
-    } else {
-      let answer = "";
-      let img = "";
-      if (end === "front") {
-        answer = "JavaScript";
-        img = "img/javascript.jpg";
+  $("#submit-btn").click(function () {
+    $("form").submit(function (event) {
+      event.preventDefault();
+      // Hides results after every submission
+      $("#result").addClass("hidden");
+      $("#error").addClass("hidden");
+      //defining variables for question answers
+      const end = $("select#which-end").val();
+      const reason = $("select#why").val();
+      const gopher = $("select#gopher").val();
+      const mobile = $("select#mobile").val();
+      const apple = $("select#apple").val();
+
+      // checks that all questions are answered
+      if (!end || !reason || !gopher || !mobile || !apple) {
+        $("#error").removeClass("hidden");
+        $("#error-message").text(
+          "Please answer every question before submitting."
+        );
       } else {
-        // if end === back
-        if (why === "fun") {
-          answer = "Python";
-          img = "img/python.jpg";
+        let answer = "";
+        let img = "";
+        if (end === "front") {
+          answer = "JavaScript";
+          img = "img/javascript.jpg";
         } else {
-          // if why === job
-          if (gopher === "cute") {
-            answer = "Go";
-            img = "img/go.jpg";
+          // if end === back
+          if (reason === "fun") {
+            answer = "Python";
+            img = "img/python.jpg";
           } else {
-            //if gopher === confused
-            if (mobile === "web") {
-              answer = "C#";
-              image = "img/c#.jpg";
+            // if why === job
+            if (gopher === "cute") {
+              answer = "Go";
+              img = "img/go.jpg";
             } else {
-              //if mobile === mobile
-              if (apple === "mac") {
-                answer = "Swift";
-                img = "img/swift.jpg";
+              //if gopher === confused
+              if (mobile === "web") {
+                answer = "C#";
+                img = "img/c-sharp.jpg";
               } else {
-                // if apple === pc
-                answer = "Java";
-                img = "img/java.jpg";
+                //if mobile === mobile
+                if (apple === "mac") {
+                  answer = "Swift";
+                  img = "img/swift.jpg";
+                } else {
+                  // if apple === pc
+                  answer = "Java";
+                  img = "img/java.jpg";
+                }
               }
             }
           }
         }
+        $("#result h2").text(answer);
+        $("#result img").attr("src", img);
+        $("#result").removeClass("hidden");
       }
-    }
+    });
   });
 });
