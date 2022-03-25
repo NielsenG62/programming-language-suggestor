@@ -1,9 +1,16 @@
 $(document).ready(function () {
   // function for when the start quiz button is pressed
   $("button#start-quiz").click(function () {
-    $("form").removeClass("hidden");
     $("#start-quiz").addClass("hidden");
     $(".line").removeClass("hidden");
+    $(".line").animate({}, 1000);
+    $(".container").animate(
+      {
+        height: "900px",
+      },
+      1000
+    );
+    $("form").removeClass("hidden");
   });
 
   // function that runs when form is submitted
