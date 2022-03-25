@@ -22,55 +22,56 @@
   <body>
     <div class="container">
       <h1>Which Programming Language Should You Learn First?</h1>
-      <p>
+      <p id="description">
         If you are thinking about learning your first programming language,
         chances are you have seen the massive (and ever-growing) list of
         languages to learn. This can be overwhelming, as all of them serve a
         specific purpose. This quiz is designed to help you with that decision.
       </p>
-    </div>
-    <button type="button" id="start-quiz" class="btn btn-info btn-sm">
-      Start Quiz!
-    </button>
-    <form class="hidden">
-      <label for="which-end">Why do you want to learn programming?</label>
-      <select class="form-control" id="which-end">
-        <option value="false" selected disabled>---Choose an Answer---</option>
-        <option value="front">I want to make cool websites for my projects!</option>
-        <option value="back">I want to build databases and servers!</option>
-      </select>
-      <label for="why">Why do you want to learn programming?</label>
-      <select class="form-control" id="why">
-        <option value="false" selected disabled>---Choose an Answer---</option>
-        <option value="fun">I think it'd be fun!</option>
-        <option value="job">I'm looking at a career switch.</option>
-      </select>
-      <label for="gopher">How do you feel about gophers?</label>
-      <select class="form-control" id="gopher">
-        <option value="false" selected disabled>---Choose an Answer---</option>
-        <option value="cute">They're so cute!</option>
-        <option value="confused">I don't understand how this matters...</option>
-      </select>
-      <label for="mobile">Do you want to develop mobile apps?</label>
-      <select class="form-control" id="mobile">
-        <option value="false" selected disabled>---Choose an Answer---</option>
-        <option value="mobile">Yes!</option>
-        <option value="web">No.</option>
-      </select>
-      <label for="apple">Do you like apples?</label>
-      <select class="form-control" id="apple">
-        <option value="false" selected disabled>---Choose an Answer---</option>
-        <option value="mac">An apple a day keeps the androids away</option>
-        <option value="pc">Apples are too popular.</option>
-      </select>
-      <button id="submit-btn" type="submit" class="btn-secondary btn">Submit</button>
-    </form>
-    <div id="result" class="hidden">
-      <h2></h2>
-      <img />
-    </div>
-    <div id="error" class="hidden">
-      <p id="error-message"></p>
+      <div class="line hidden"></div>
+      <button type="button" id="start-quiz" class="btn btn-info">
+        Start Quiz!
+      </button>
+      <form class="hidden">
+        <label for="which-end">What do you want to do with your new knowledge?</label>
+        <select class="form-control" id="which-end">
+          <option value="false" selected disabled>---Choose an Answer---</option>
+          <option value="front">I want to make cool websites for my projects!</option>
+          <option value="back">I want to build databases and servers!</option>
+        </select>
+        <label for="why">Why do you want to learn programming?</label>
+        <select class="form-control" id="why">
+          <option value="false" selected disabled>---Choose an Answer---</option>
+          <option value="fun">I think it'd be fun!</option>
+          <option value="job">I'm looking at a career switch.</option>
+        </select>
+        <label for="gopher">How do you feel about gophers?</label>
+        <select class="form-control" id="gopher">
+          <option value="false" selected disabled>---Choose an Answer---</option>
+          <option value="cute">They're so cute!</option>
+          <option value="confused">I don't understand how this matters...</option>
+        </select>
+        <label for="mobile">Do you want to develop mobile apps?</label>
+        <select class="form-control" id="mobile">
+          <option value="false" selected disabled>---Choose an Answer---</option>
+          <option value="mobile">Yes!</option>
+          <option value="web">No.</option>
+        </select>
+        <label for="apple">Do you like apples?</label>
+        <select class="form-control" id="apple">
+          <option value="false" selected disabled>---Choose an Answer---</option>
+          <option value="mac">An apple a day keeps the androids away</option>
+          <option value="pc">Apples are too popular.</option>
+        </select>
+        <button id="submit-btn" type="submit" class="btn">Submit</button>
+      </form>
+      <div id="result" class="hidden under">
+        <h2></h2>
+        <img />
+      </div>
+      <div id="error" class="hidden under">
+        <p id="error-message"></p>
+      </div>
     </div>
   </body>
 </html>
